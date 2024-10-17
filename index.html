@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zum Site</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .video-container {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #background-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+
+    .content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Estilização do botão "Conheça" inspirado na Akatsuki */
+    .content p a {
+      padding: 15px 40px;
+      background-color: #b01a1a; /* Cor vermelha Akatsuki */
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .content p a:hover {
+      background-color: #8a1515;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animação de nuvem no botão */
+    .content p a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: url('akatsuki-cloud.png') no-repeat center; /* Adicione a imagem de nuvem da Akatsuki */
+      background-size: 50px 50px;
+      opacity: 0.8;
+      transition: all 0.5s ease;
+    }
+
+    .content p a:hover::before {
+      left: 0;
+      background-size: 80px 80px;
+    }
+
+    /* Opcional: Adiciona mais sombras ao botão */
+    .content p a:hover {
+      box-shadow: 0px 0px 10px #ff5c5c, 0px 0px 20px #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="itachi-anbu-x-akatsuki-uchiha-logo-moewalls-com.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+      <h1>ZUm site</h1>
+      <p><a href="Lethalcompany.html">Conheça</a></p>
+    </div>
+  </div>
+</body>
+</html>
